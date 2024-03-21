@@ -1,5 +1,5 @@
 package tp1.ejercicio1;
-
+// Corregido
 public class ejercicio1 {
 	public static void recorridoFor(int a,int b) {
 		for (int i = a;i<=b;i++) {

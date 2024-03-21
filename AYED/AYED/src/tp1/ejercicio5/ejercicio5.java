@@ -1,5 +1,5 @@
 package tp1.ejercicio5;
-
+// Corregido
 public class ejercicio5 {
 	public static int[] arreglo = {1,2,3,4,5};
 	

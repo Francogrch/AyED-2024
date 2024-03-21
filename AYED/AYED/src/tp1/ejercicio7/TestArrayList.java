@@ -17,10 +17,10 @@ public class TestArrayList {
 		array.add(estu2);
 		array.add(estu3);
 		
-		ArrayList<Estudiante> array2 = new ArrayList<Estudiante>();
-		array2.add(estu1);
-		array2.add(estu2);
-		array2.add(estu3);
+		ArrayList<Estudiante> array2 = new ArrayList<Estudiante>(array);
+		//array2.addAll(array)
+		// Tambien funciona
+		
 		
 		
 		System.out.println("Original----------------------");
@@ -52,7 +52,8 @@ public class TestArrayList {
 		imprimir(array);
 	}
 	
-	public static boolean esCapicuaR(ArrayList<Integer> list) {
+	// Modifico la lista OJO!
+	public static boolean esCapicuaR(List<Integer> list) {
 		if (list.size()<=1) {
 			return true;
 		}else {
@@ -65,7 +66,9 @@ public class TestArrayList {
 			}
 		}
 	}
-	public static boolean esCapicua(ArrayList<Integer> lista) {
+	
+	// -127 a 128 equals es igual al ==
+	public static boolean esCapicua(List<Integer> lista) {
 		if (lista.size() % 2 != 0) {
 			ArrayList<Integer> copia = new ArrayList<Integer>(lista);
 			return esCapicuaR(copia);
