@@ -745,7 +745,8 @@ A partir de una expresion:
 
         Seudocódigo Ejerc1-Niveles {
             q: cola de vértices;
-            encolar raíz R en q; encolar ?? en q;
+            encolar raíz R en q; 
+            encolar ?? en q;
             mientras (cola no se vacíe) {
                 desencolar v de q;
                 si (dato de v no es ??) {
