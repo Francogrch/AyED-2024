@@ -29,7 +29,6 @@ public class TestEjercicio7 {
         a4.addChild(a8);
         a4.addChild(a9);
         a6.addChild(a10);
-        a6.addChild(a10);
         a8.addChild(a11);
         a8.addChild(a12);
 

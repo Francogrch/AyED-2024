@@ -1116,7 +1116,7 @@ Es una estructura de datos que permite al menos dos **operaciones**:
 
             precolate_up(Heap h, Integer i){
                 temp = h.dato[i];
-                while (i>2 0 && h.dato[i/2] > temp) {
+                while (i>2 && h.dato[i/2] > temp) {
                     h.dato[i] = h.dato[i/2];
                     i=i/2;
                 }

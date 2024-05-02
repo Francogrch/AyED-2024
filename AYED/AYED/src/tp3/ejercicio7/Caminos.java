@@ -14,17 +14,13 @@ public class Caminos {
     }
 
     public void caminoMasLargo(GeneralTree<Integer> a, List<Integer> l) {
-        System.out.println("Nodo" + a.getData());
-        System.out.println("l " + l.size() + " lista " + lista.size());
+
         l.add(a.getData());
         if ((a.isLeaf()) && (l.size() > lista.size())) {
-            for (Integer e : lista) {
-                lista.remove(e);
-            }
+            lista.clear();
             for (Integer e : l) {
                 boolean add = lista.add(e);
             }
-            System.out.println(l.toString());
         }
         for (GeneralTree<Integer> child : a.getChildren()) {
             caminoMasLargo(child, l);
