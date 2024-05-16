@@ -1,0 +1,63 @@
+Claro, vamos a detallar cada uno de los pasos para determinar si una función f(n)f(n) pertenece a O(g(n))O(g(n)) utilizando la notación Big-O.
+1. Identificar las funciones
+
+Primero, necesitas identificar la función f(n)f(n) que deseas analizar y la función g(n)g(n) con la cual deseas compararla.
+
+    f(n)f(n): Es la función que quieres acotar superiormente. Esta es la función cuyo comportamiento asintótico estás interesado en describir.
+    g(n)g(n): Es la función que proporciona la cota superior. Esta es la función más simple o conocida que sirve de referencia para acotar f(n)f(n).
+
+Por ejemplo, si tienes f(n)=3n+2f(n)=3n+2 y quieres demostrar que es O(n)O(n), entonces g(n)=ng(n)=n.
+2. Expresar la desigualdad
+
+El siguiente paso es formular la desigualdad que necesitas demostrar:
+
+f(n)≤C⋅g(n)f(n)≤C⋅g(n)
+
+Donde CC es una constante positiva y n0n0​ es un valor de nn a partir del cual la desigualdad se cumple. Esto significa que para valores suficientemente grandes de nn, la función f(n)f(n) no crece más rápido que CC veces la función g(n)g(n).
+
+Por ejemplo, para f(n)=3n+2f(n)=3n+2 y g(n)=ng(n)=n, necesitas encontrar CC y n0n0​ tal que:
+
+3n+2≤C⋅n3n+2≤C⋅n
+3. Encontrar CC y n0n0​
+
+Ahora, necesitas encontrar valores específicos para CC y n0n0​ que satisfagan la desigualdad anterior. Esto generalmente implica dos subpasos:
+a. Aislar los términos: Separa los términos de la función f(n)f(n) y compara cada uno de ellos con g(n)g(n). A veces, es útil reescribir f(n)f(n) en una forma que facilite esta comparación.
+
+Para el ejemplo f(n)=3n+2f(n)=3n+2 y g(n)=ng(n)=n, reescribimos la desigualdad:
+
+3n+2≤C⋅n3n+2≤C⋅n
+b. Determinar CC y n0n0​: Encuentra una constante CC tal que la desigualdad se mantenga para nn suficientemente grande. A menudo, esto involucra:
+
+    Evaluar la desigualdad para diferentes valores de nn y ajustar CC en consecuencia.
+    Resolver la desigualdad algebraicamente para encontrar el valor crítico n0n0​.
+
+Para el ejemplo:
+
+    Primero, despeja CC:
+
+3n+2≤C⋅n3n+2≤C⋅n
+3n+2≤C⋅n  ⟹  3+2n≤C3n+2≤C⋅n⟹3+n2​≤C
+
+    Ahora, observa que a medida que nn se vuelve grande, el término 2nn2​ se vuelve pequeño. Entonces, elige CC un poco mayor que 3. Por ejemplo, C=4C=4 funcionaría.
+
+    Comprueba si esto se cumple para algún n0n0​:
+
+3+2n≤43+n2​≤4
+2n≤1n2​≤1
+n≥2n≥2
+
+Entonces, puedes elegir C=4C=4 y n0=2n0​=2. Esto significa que para todo n≥2n≥2:
+
+3n+2≤4n3n+2≤4n
+Resumen General
+
+Para demostrar que f(n)f(n) es O(g(n))O(g(n)), sigue estos pasos:
+
+    Identificar las funciones: Decide cuál es f(n)f(n) y cuál es g(n)g(n).
+    Expresar la desigualdad: Plantea f(n)≤C⋅g(n)f(n)≤C⋅g(n) para encontrar CC y n0n0​.
+    Encontrar CC y n0n0​:
+        Despeja y simplifica la desigualdad.
+        Evalúa y ajusta CC según sea necesario.
+        Determina n0n0​ a partir del cual la desigualdad es cierta.
+
+Este enfoque te permitirá abordar de manera sistemática los problemas de notación Big-O. Si necesitas más ejemplos específicos o tienes alguna duda, no dudes en preguntar.
