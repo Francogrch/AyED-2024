@@ -1,10 +1,10 @@
 /**
- * 
+ *
  */
 /**
- * 
+ *
  */
 module AYED {
-	requires java.desktop;
-    requires kotlin.stdlib;
+    requires java.desktop;
+    requires junit;
 }
