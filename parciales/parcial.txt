@@ -1,0 +1,38 @@
+public class Parcial {
+
+  private boolean resolver_r(GeneralTree<Integer> ab,int min, List<Integer> camino, int pares){
+    if (ab.getData() % 2 == 0){
+        pares = pares + 1;
+      }
+    boolean corte = false;
+    if (ab.isLeaf()){
+      if (pares >= min){
+        camino.addFirst(ab.getData());
+        corte = true;
+      }else{
+        corte = false;
+      }
+    }else{
+      camino.addFirst(ab.getData());
+
+      if (ab.hasLeftChild()){
+        corte = resolver_r(ab.getLeftChild(),min,camino,pares);
+      }
+      if (ab.hasRightChild() && !corte){
+        corte = resolver_r(ab.getRightChild(),min,camino,pares);
+      }
+      if (!corte){
+        camino.remove(0);
+      }
+    }
+    return corte;
+  }
+
+  public List<Integer> resolver(GeneralTree<Integer> ab, int min){
+      List<Integer> camino = new ArrayList<Integer>();
+    if (!ab.isEmpty()){
+      resolver_r(ab,min,camino,0);
+    }
+    return camino;
+  }
+}

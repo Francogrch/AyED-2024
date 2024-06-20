@@ -47,6 +47,9 @@ public class MapaTest {
         System.out.println("-----------------------------------");
 
         System.out.println("caminoMasCorto()");
+
+        System.out.println(m.caminoMasCorto("La Plata", "Ringuelet"));
+
         System.out.println("-----------------------------------");
         System.out.println("camninoSinCargarCombustible()");
         System.out.println("-----------------------------------");
