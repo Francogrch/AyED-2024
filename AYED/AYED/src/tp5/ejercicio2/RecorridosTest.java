@@ -23,7 +23,7 @@ public class RecorridosTest {
         grafo.connect(v2, v1);
         grafo.connect(v2, v6);
 
-        Recorridos<Integer> reco = new Recorridos();
+        Recorrido<Integer> reco = new Recorrido();
         System.out.println("DFS");
         System.out.println(reco.dfs(grafo));
         System.out.println("---------------------------------------");

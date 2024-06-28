@@ -6,5 +6,5 @@
  */
 module AYED {
     requires java.desktop;
-    requires junit;
+    //requires junit;
 }
